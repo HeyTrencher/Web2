@@ -12,8 +12,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background-color: #000000;
             color: #ffffff;
             min-height: 100vh;
@@ -22,19 +21,18 @@ Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
 
         .header {
-    display: flex;
-    align-items: center;
-    padding: 20px 40px;
-    padding-left: 145px;
-    background-color: #000;
-    border-bottom: 1px solid #333;
-}
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px 0;
+            background-color: #000;
+        }
 
-        .logo {
-            height: 50px;
-            width: auto;
-            display: block
-            margin-left: 20px;
+        .header img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            display: block;
         }
 
         .container {
@@ -111,9 +109,7 @@ Roboto, 'Helvetica Neue', Arial, sans-serif;
         select {
             cursor: pointer;
             appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg 
-xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 
-12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffff' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 15px center;
             padding-right: 40px;
@@ -172,12 +168,8 @@ xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12
         }
 
         @media (max-width: 768px) {
-            .header {
-                padding: 15px 20px;
-            }
-
-            .logo {
-                height: 40px;
+            .header img {
+                max-height: 200px;
             }
 
             .signup-box {
@@ -192,44 +184,41 @@ xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12
 </head>
 <body>
 
+    <div class="header">
+        <img src="ovo_logo.jpg" alt="Octobers Very Own" />
+    </div>
+
     <div class="container">
         <div class="signup-box">
             <h1 class="title">Sponsorship Application</h1>
             <p class="subtitle">Complete your OVO profile</p>
 
-            <form id="signupForm" method="post" 
-action="/submit-sponsorship">
+            <form id="signupForm" method="post" action="/submit-sponsorship">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" 
-placeholder="Enter your full name" required>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" 
-placeholder="your.email@example.com" required>
+                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
                 </div>
 
                 <div class="form-group">
                     <label for="address">Shipping Address *</label>
-                    <input type="text" id="address" name="address" 
-placeholder="Enter your complete address" required>
+                    <input type="text" id="address" name="address" placeholder="Enter your complete address" required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" 
-placeholder="(555) 123-4567" required>
-                    <div class="error-message" id="phoneError">Please 
-enter a valid phone number</div>
+                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                    <div class="error-message" id="phoneError">Please enter a valid phone number</div>
                 </div>
 
                 <div class="form-group">
                     <label for="shirtSize">Shirt/Hoodie Size *</label>
                     <select id="shirtSize" name="shirt_size" required>
-                        <option value="" disabled selected>Select your 
-size</option>
+                        <option value="" disabled selected>Select your size</option>
                         <option value="XS">XS - Extra Small</option>
                         <option value="S">S - Small</option>
                         <option value="M">M - Medium</option>
@@ -243,8 +232,7 @@ size</option>
                 <div class="form-group">
                     <label for="shoeSize">Shoe Size *</label>
                     <select id="shoeSize" name="shoe_size" required>
-                        <option value="" disabled selected>Select your 
-size</option>
+                        <option value="" disabled selected>Select your size</option>
                         <option value="6">US 6</option>
                         <option value="6.5">US 6.5</option>
                         <option value="7">US 7</option>
@@ -270,8 +258,7 @@ size</option>
                 <div class="form-group">
                     <label for="bottomsSize">Bottoms Size *</label>
                     <select id="bottomsSize" name="bottoms_size" required>
-                        <option value="" disabled selected>Select your 
-size</option>
+                        <option value="" disabled selected>Select your size</option>
                         <option value="XS">XS - Extra Small</option>
                         <option value="S">S - Small</option>
                         <option value="M">M - Medium</option>
@@ -291,14 +278,10 @@ size</option>
                 </div>
 
                 <div class="info-text">
-                    <strong>Important:</strong> A monthly catalog will be 
-available for you to select items from our exclusive collection. To access 
-the catalog and browse available gear, you will need to connect with 
-Instagram and verify your phone number for authentication purposes.
+                    <strong>Important:</strong> A monthly catalog will be available for you to select items from our exclusive collection. To access the catalog and browse available gear, you will need to connect with Instagram and verify your phone number for authentication purposes.
                 </div>
 
-                <button type="submit" class="submit-btn">Complete 
-Now</button>
+                <button type="submit" class="submit-btn">Complete Now</button>
             </form>
         </div>
     </div>
@@ -308,39 +291,29 @@ Now</button>
         const phoneInput = document.getElementById('phone');
         const phoneError = document.getElementById('phoneError');
 
-        // Format phone number as user types
         phoneInput.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
-            
             if (value.length > 0) {
                 if (value.length <= 3) {
                     value = '(' + value;
                 } else if (value.length <= 6) {
-                    value = '(' + value.slice(0, 3) + ') ' + 
-value.slice(3);
+                    value = '(' + value.slice(0, 3) + ') ' + value.slice(3);
                 } else {
-                    value = '(' + value.slice(0, 3) + ') ' + 
-value.slice(3, 6) + '-' + value.slice(6, 10);
+                    value = '(' + value.slice(0, 3) + ') ' + value.slice(3, 6) + '-' + value.slice(6, 10);
                 }
             }
-            
             e.target.value = value;
             phoneError.classList.remove('show');
         });
 
-        // Handle form submission
         form.addEventListener('submit', function(e) {
             const phoneValue = phoneInput.value.replace(/\D/g, '');
-            
-            // Validate phone number (must be 10 digits)
             if (phoneValue.length !== 10) {
                 e.preventDefault();
                 phoneError.classList.add('show');
                 phoneInput.focus();
                 return false;
             }
-
-            // Form is valid, will submit to server
             return true;
         });
     </script>
